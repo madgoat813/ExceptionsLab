@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab0.solution;
+package Solution;
 
 /**
  *
@@ -12,7 +12,7 @@ package lab0.solution;
 import java.util.Date;
 
 
-public class Startup {
+public class Lab0Startup {
     private String lastName;
     private String firstName;
     private Date hireDate;
@@ -23,7 +23,7 @@ public class Startup {
 
     
     public static void main(String[] args) {
-        Startup start = new Startup();
+        Lab0Startup start = new Lab0Startup();
 
         lab0.Employee emp = new lab0.Employee(
             "Jim",
