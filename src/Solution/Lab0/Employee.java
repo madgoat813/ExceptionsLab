@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Solution;
+package Solution.Lab0;
 
 /**
  *
@@ -12,7 +12,7 @@ package Solution;
 import java.util.Date;
 
 
-public class Lab0Employee {
+public class Employee {
     public static final int MAX_VACATION_DAYS = 28;
     public static final int MIN_NAME_LENGTH = 3;
     private String firstName;
@@ -21,7 +21,7 @@ public class Lab0Employee {
     private Date hireDate;
     private int daysVacation;
 
-    public Lab0Employee() {
+    public Employee() {
         firstName = "Unknown";
         lastName = "Unknown";
         ssn = "Unknown";
@@ -29,7 +29,7 @@ public class Lab0Employee {
         daysVacation = 0;
     }
 
-    public Lab0Employee(String firstName, String lastName, String ssn, Date hireDate, int daysVacation) throws IllegalArgumentException {
+    public Employee(String firstName, String lastName, String ssn, Date hireDate, int daysVacation) throws IllegalArgumentException {
         setFirstName(firstName);
         setLastName(lastName);
         setSsn(ssn);
