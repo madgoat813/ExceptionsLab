@@ -25,10 +25,10 @@ public class Startup {
     public static void main(String[] args) {
         Startup start = new Startup();
 
-        lab0.Employee emp = new lab0.Employee(
+        Employee emp = new Employee(
             "Jim",
             "Smith",
-            "3333333333",
+            "000-00-0000",
             start.hireDate,
             start.vacationDays);
          

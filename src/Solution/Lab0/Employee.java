@@ -53,7 +53,7 @@ public class Employee {
     }
 
     public final void setFirstName(String firstName) {
-       if (firstName == null || firstName.length() <= MIN_NAME_LENGTH) {
+       if (firstName == null || firstName.length() < MIN_NAME_LENGTH) {
            throw new IllegalArgumentException("First Name must be at least " + MIN_NAME_LENGTH + " characters long");
        }
         this.firstName = firstName;
@@ -75,7 +75,7 @@ public class Employee {
     }
 
     public void setLastName(String lastName) {
-        if (lastName == null || lastName.length() <= MIN_NAME_LENGTH) {
+        if (lastName == null || lastName.length() < MIN_NAME_LENGTH) {
            throw new IllegalArgumentException("Last Name must be at least " + MIN_NAME_LENGTH + " characters long");
        }
         this.lastName = lastName;
@@ -88,9 +88,12 @@ public class Employee {
     // 333-33-3333
     // 333333333
     public void setSsn(String ssn) {
-        if (ssn == null ) {
-            
+        if (ssn == null || ssn.length() != 9 ) {
+            if (ssn.length() != 11) {
+            throw new IllegalArgumentException("SSN must be either 9 or 11 characters");
+            }
         }
+        
         this.ssn = ssn;
     }
     
