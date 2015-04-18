@@ -35,7 +35,7 @@ public class Startup {
         String fullNameInCaps = 
                 emp.getFirstName().toUpperCase() 
                 + " " + emp.getLastName().toUpperCase();
-        System.out.println(fullNameInCaps);
+        System.out.println(fullNameInCaps + " Is Name");
         
     }
 }
