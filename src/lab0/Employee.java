@@ -47,6 +47,9 @@ public class Employee {
     }
 
     public void setDaysVacation(int daysVacation) {
+        if (daysVacation < 0 || daysVacation > MAX_VACATION_DAYS) {
+            throw new IllegalArgumentException("Vacation days must be between 0 and 28 days");
+        }
         this.daysVacation = daysVacation;
     }
 
@@ -55,6 +58,7 @@ public class Employee {
     }
 
     public final void setFirstName(String firstName) {
+        
         this.firstName = firstName;
     }
 

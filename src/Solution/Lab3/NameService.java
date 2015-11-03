@@ -19,9 +19,16 @@ public class NameService {
      * 
      * @param fullName - a name containing a first name and a last name
      * @return the last name
+     * @throws Solution.Lab3.FullNameException
      */
-    public String extractLastName(String fullName) {
+    public String extractLastName(String fullName) throws FullNameException{
+        if (fullName.length() == 0){
+        throw new FullNameException("Full name must consist of a first name and a last name");
+        } 
         String[] nameParts = fullName.split(" ");
+        if (nameParts.length < 2 || nameParts.length > 2){
+            throw new FullNameException("Please Enter a First and a Last Name");
+        }
         return nameParts[LAST_NAME_IDX];
     }
     
@@ -31,9 +38,16 @@ public class NameService {
      * 
      * @param fullName - a name containing a first name and a last name
      * @return the first name
+     * @throws Solution.Lab3.FullNameException
      */
-    public String extractFirstName(String fullName) {
+    public String extractFirstName(String fullName) throws FullNameException{
+        if (fullName.length() == 0){
+        throw new FullNameException("Full name must consist of a first name and a last name");
+        } 
         String[] nameParts = fullName.split(" ");
+        if (nameParts.length < 2 || nameParts.length > 2){
+            throw new FullNameException("Please Enter a First and a Last Name");
+        }
         return nameParts[FIRST_NAME_IDX];
     }
 
